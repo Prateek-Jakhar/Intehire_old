@@ -22,3 +22,23 @@
 
   color: #232c33;
 }
+
+.forumButton {
+  display: flex;
+  justify-content: space-around;
+}
+
+.submit-button {
+  height: 50px;
+  width: 248px;
+  background: #41337a;
+  border-radius: 10px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  cursor: pointer;
+  margin-left: 40px;
+}

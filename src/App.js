@@ -12,9 +12,12 @@ import Forum from "./components/Forum.js";
 import Applications from "./components/Applications";
 import Opportunity from "./components/Opportunity";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { UserContainer, UserContext } from "./components/NameContext";
+import SubmitExperience from "./components/SubmitExperience";
 
 function App() {
   return (
+    // <UserContainer>
     <div className="App">
       {/*<LogIn />*/}
       {/* <NewOpportunityCard /> */} {/* <NewOpportunityCardTop /> */}{" "}
@@ -36,9 +39,11 @@ function App() {
           <Route path="/application" element={<Applications />} />
           <Route path="/opportunity" element={<Opportunity />} />
           <Route path="/people" element={<People />} />
+          <Route path="/submitExp" element={<SubmitExperience />} />
         </Routes>
       </BrowserRouter>
     </div>
+    // </UserContainer>
   );
 }
 

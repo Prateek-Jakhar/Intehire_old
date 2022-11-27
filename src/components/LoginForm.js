@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import LoginLogo from "./../assets/login_logo.png";
 import Googlelogo from "./../assets/Googlelogo.png";
 import DividerWithText from "./DividerWithText";
@@ -14,10 +14,12 @@ import { auth, googleProvider } from "./Firebase";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { UserContext } from "./NameContext";
 
 // toast.configure()
 
 const LoginForm = () => {
+  const userContext = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   let navigate = useNavigate();
@@ -33,9 +35,11 @@ const LoginForm = () => {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
+        console.log(user);
         // ...
         console.log("LOGIN SUCCESSFUL");
         if (user.email.split("@")[1] === "lnmiit.ac.in") {
+          userContext.setName();
           localStorage.setItem("isLoggedIn", true);
           navigate("/", { replace: true });
         } else {

@@ -21,7 +21,7 @@ const NewOpportunityCard = ({ info }) => {
           <img src={logo} alt="" />
           <div>
             <h3>{info.title}</h3>
-            <p style={{ marginLeft: "-128px", marginTop: "-8px" }}>
+            <p style={{ marginLeft: "-1px", marginTop: "-8px" }}>
               ZS Associates
             </p>
           </div>

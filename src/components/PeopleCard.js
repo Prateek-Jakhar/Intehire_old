@@ -42,8 +42,7 @@ const PeopleCard = ({ info }) => {
       </div>
       <div className="msg-bottom">
         <span className="Message-button">
-          <img src={msg} alt="" />
-          <strong className="Message-bottom-label">Messages</strong>
+          <strong className="Message-bottom-label">&#128222; Messages</strong>
         </span>
       </div>
     </div>

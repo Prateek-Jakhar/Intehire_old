@@ -12,12 +12,15 @@
   box-shadow: 4px 4px 18px 1px rgba(41, 88, 128, 0.15);
   border-radius: 12px;
 }
-.top{
-  position:relative;
+.main-card h3 {
+  width: 50%;
+}
+.top {
+  position: relative;
   margin-top: 20px;
 }
 
-.company-info{
+.company-info {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
@@ -104,10 +107,9 @@
   flex-direction: row;
   justify-content: flex-end;
   margin-right: 100px;
-  
 }
 
 .graduation-cap {
-  margin-left: 500px;
+  margin-left: 650px;
   align-items: right;
 }
