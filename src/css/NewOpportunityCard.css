@@ -1,0 +1,113 @@
+.main-card {
+  padding-top: 0.5rem;
+  /* margin: auto; */
+  /* margin-left: 25px; */
+  margin-top: 60px;
+  position: static;
+  width: 896px;
+  height: 221px;
+  left: 0px;
+  /* top: 1px; */
+  background: #ffffff;
+  box-shadow: 4px 4px 18px 1px rgba(41, 88, 128, 0.15);
+  border-radius: 12px;
+}
+.top{
+  position:relative;
+  margin-top: 20px;
+}
+
+.company-info{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+/* .icon {
+  padding-left: 20vw;
+} */
+.company-info > img {
+  position: static;
+  width: 48px;
+  height: 48px;
+  left: 0px;
+  top: 0px;
+  /* border: 1px solid #232c33; */
+  box-sizing: border-box;
+  border-radius: 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 8px;
+}
+
+.company-info > h3 {
+  position: static;
+  width: 235px;
+  height: 26px;
+  left: 0px;
+  top: 0px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 26px;
+  color: #41337a;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+.company-info > p {
+  position: static;
+  width: 77px;
+  height: 16px;
+  left: 0px;
+  top: 26px;
+  /* margin-top: 100px; */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #232c33;
+  opacity: 0.6;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  /* margin: 0px 0px; */
+  width: fit-content;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-left: 0px;
+  margin-bottom: 10px;
+}
+
+.job-type {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
+
+.intern {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Nbottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 100px;
+  
+}
+
+.graduation-cap {
+  margin-left: 500px;
+  align-items: right;
+}
