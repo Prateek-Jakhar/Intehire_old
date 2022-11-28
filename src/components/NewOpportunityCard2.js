@@ -22,28 +22,27 @@ const NewOpportunityCard = ({ info }) => {
 
   const handleApply = async () => {
     const docRef = await addDoc(collection(db, "applications"), {
-        company_name:info.company_name,
-        date:info.date,
-        end_date:info.end_date,
-        job_type:info.job_type,
-        stipend:info.stipend,
-        title:info.title,
-        oppor_id: info.id
-      });
-      const app_id = docRef.id;
-      console.log(app_id);
-      await setDoc(doc(db, "applications", app_id), {
-        company_name:info.company_name,
-        date:info.date,
-        end_date:info.end_date,
-        id:app_id,
-        job_type:info.job_type,
-        stipend:info.stipend,
-        title:info.title,
-        oppor_id: info.id
-      });
+      company_name: info.company_name,
+      date: info.date,
+      end_date: info.end_date,
+      job_type: info.job_type,
+      stipend: info.stipend,
+      title: info.title,
+      oppor_id: info.id,
+    });
+    const app_id = docRef.id;
+    console.log(app_id);
+    await setDoc(doc(db, "applications", app_id), {
+      company_name: info.company_name,
+      date: info.date,
+      end_date: info.end_date,
+      id: app_id,
+      job_type: info.job_type,
+      stipend: info.stipend,
+      title: info.title,
+      oppor_id: info.id,
+    });
 
-      
     const usermail = localStorage.getItem("usermail");
     const querySnapshot = await getDoc(doc(db, "people", usermail));
     let forum_data;
@@ -53,26 +52,22 @@ const NewOpportunityCard = ({ info }) => {
 
     forum_data.applications.push(app_id);
     forum_data.opportunities.push(info.id);
-    
-    await setDoc(
-    doc(db, "people", usermail),
-    forum_data
-    );
+
+    await setDoc(doc(db, "people", usermail), forum_data);
 
     console.log("Done");
-
-  }
+  };
 
   const handleTemp = () => {
     console.log({
-      company_name:info.company_name,
-      date:info.date,
-      end_date:info.end_date,
-      job_type:info.job_type,
-      stipend:info.stipend,
-      title:info.title,
+      company_name: info.company_name,
+      date: info.date,
+      end_date: info.end_date,
+      job_type: info.job_type,
+      stipend: info.stipend,
+      title: info.title,
     });
-  }
+  };
 
   return (
     <div className="main-card">
@@ -113,7 +108,15 @@ const NewOpportunityCard = ({ info }) => {
         </div>
       </div>
       <hr style={{ marginLeft: "24px" }} />
-      <button onClick={()=>(handleApply())}>Apply</button>
+      <div style={{ position: "absolute", left: "300px" }}>
+        <button
+          style={{ height: "37px", width: "129px" }}
+          onClick={() => handleApply()}
+        >
+          Apply
+        </button>
+      </div>
+
       <div className="Nbottom">
         <span style={{ marginRight: "30px", marginTop: "15px" }}>
           {diffDays} days ago
