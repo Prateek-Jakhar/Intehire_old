@@ -37,7 +37,7 @@ const OldOpportunityCard = ({ info }) => {
   var diffTime = Math.abs(date2 - date1);
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   // console.log(info.id);
-
+  const imgUrl = localStorage.getItem("photoURL");
   return (
     <div className="main-old">
       <Link to={`/forum/${info.id}`}>
@@ -64,7 +64,7 @@ const OldOpportunityCard = ({ info }) => {
       <br />
       <hr />
       <div className="bottom">
-        <img src={pic} alt="" />
+        <img src={imgUrl} alt="" />
         <span className="name">
           <strong>{info.experience[0].name}</strong> shared his experience
         </span>

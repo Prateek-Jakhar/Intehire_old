@@ -65,7 +65,7 @@ const ProfileButton = () => {
             />
           )}
         </div>
-        <div>{isActive && <LogoutMenu />}</div>
+        <div style={{ marginTop: "15px" }}>{isActive && <LogoutMenu />}</div>
       </div>
     </>
   );

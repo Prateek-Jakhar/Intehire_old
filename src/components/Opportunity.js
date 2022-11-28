@@ -3,7 +3,7 @@ import Applications from "./Applications";
 import LeftHeader from "./LeftHeader";
 import "./../css/Opportunity.css";
 import { useNavigate } from "react-router-dom";
-import NewOpportunityCard from "./NewOpportunityCard";
+import NewOpportunityCard from "./NewOpportunityCard2";
 import ProfileButton from "./ProfileButton";
 import { db } from "./Firebase";
 import { collection, getDocs } from "firebase/firestore";
@@ -49,9 +49,12 @@ const Opportunity = () => {
 
   return (
     <div className="opportunityMain">
-      {/* <div style={{ width: "228px" }}>
+      <div style={{ position: "absolute", right: "50px" }}>
+        <ProfileButton />
+      </div>
+      <div style={{ width: "228px" }}>
         <LeftHeader />
-      </div> */}
+      </div>
       <div className="opportunityMainRight">
         {dataApplication.map((item) => {
           return (
