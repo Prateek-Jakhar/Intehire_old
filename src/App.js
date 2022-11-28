@@ -12,25 +12,13 @@ import Forum from "./components/Forum.js";
 import Applications from "./components/Applications";
 import Opportunity from "./components/Opportunity";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { UserContainer, UserContext } from "./components/NameContext";
 import SubmitExperience from "./components/SubmitExperience";
+import Profile from "./components/Profile";
+import { UserContainer, UserContext } from "./components/NameContext";
 
 function App() {
   return (
-    // <UserContainer>
     <div className="App">
-      {/*<LogIn />*/}
-      {/* <NewOpportunityCard /> */} {/* <NewOpportunityCardTop /> */}{" "}
-      {/*<OldOpportunityCard />*/}
-      {/* <Forum /> */}
-      {/*<PeopleCard />*/}
-      {/*<PeopleList/>*/}
-      {/* <FeedButton text={"Discover"} /> */}
-      {/* {<LeftHeader />} */}
-      {/*<LeftMenu />*/}
-      {/* <Applications /> */}
-      {/* <People /> */}
-      {/* <Opportunity /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Dashboard />} />
@@ -39,11 +27,11 @@ function App() {
           <Route path="/application" element={<Applications />} />
           <Route path="/opportunity" element={<Opportunity />} />
           <Route path="/people" element={<People />} />
-          <Route path="/submitExp" element={<SubmitExperience />} />
+          <Route path="/submitExp/:forum_id" element={<SubmitExperience />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </div>
-    // </UserContainer>
   );
 }
 

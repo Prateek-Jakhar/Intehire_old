@@ -39,7 +39,7 @@ const Applications = () => {
             <text>On Campus</text>
           </span>
           <span className="apply-filters">
-            <text>Apply Filters</text>
+            <text></text>
           </span>
           <ProfileButton />
         </div>

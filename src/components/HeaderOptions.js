@@ -25,8 +25,8 @@ const HeaderOptions = () => {
       </Link>
 
       <Link to={"/people"}>
-        <div classname="People" style={{ marginLeft: "-120px" }}>
-          <img classname="image" src={twopeople} alt="" />
+        <div className="People" style={{ marginLeft: "-120px" }}>
+          <img classname="image" style={{}} src={twopeople} alt="" />
           <span className="header-button">People</span>
         </div>
       </Link>
@@ -73,10 +73,10 @@ const HeaderOptions = () => {
         </div>
       </Link>
 
-      <Link to={"/"}>
+      <Link to={"/Profile"}>
         <div classname="Resume" style={{ marginLeft: "-108px" }}>
           <img classname="image" src={resume} alt="" />
-          <span className="header-button">Resume</span>
+          <span className="header-button">Profile</span>
         </div>
       </Link>
     </div>

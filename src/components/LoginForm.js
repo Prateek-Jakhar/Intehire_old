@@ -71,6 +71,7 @@ const LoginForm = () => {
           localStorage.setItem("isLoggedIn", true);
           localStorage.setItem("userName", user.displayName);
           localStorage.setItem("photoURL", user.photoURL);
+          localStorage.setItem("usermail", user.email);
           navigate("/", { replace: true });
         } else {
           toast.error("Login failed", {

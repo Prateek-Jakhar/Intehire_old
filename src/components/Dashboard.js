@@ -9,6 +9,7 @@ import NewOpportunityCardTop from "./NewOpportunityCardTop";
 import { db } from "./Firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import ProfileButton from "./ProfileButton";
 
 const Dashboard = () => {
   const [dataApplication, setDataApplication] = useState([]);
@@ -48,6 +49,9 @@ const Dashboard = () => {
 
   return (
     <div className="dashboardMain">
+      <div style={{ position: "absolute", right: "50px" }}>
+        <ProfileButton />
+      </div>
       <div style={{ width: "228px" }}>
         <LeftHeader />
       </div>

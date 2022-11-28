@@ -60,6 +60,19 @@ const ResponseCard = ({ id }) => {
         </div>
         <div className="second-answer">{data.a2}</div>
         <hr />
+        <div className="second-question">
+          What was their selection and interview process like?
+        </div>
+        <div className="second-answer">{data.a1}</div>
+        <hr />
+        <div className="second-question">
+          What was the Interview Difficulty Level in your opinion?
+        </div>
+        <div className="second-answer">{data.a2}</div>
+        <hr />
+        <div className="second-question">How was the overall experience?</div>
+        <div className="second-answer">{data.a2}</div>
+        <hr />
       </div>
     </div>
   );

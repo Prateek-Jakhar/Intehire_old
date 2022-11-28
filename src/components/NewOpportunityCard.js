@@ -5,6 +5,7 @@ import { Icon } from "semantic-ui-react";
 import hat from "../assets/hat.png";
 
 const NewOpportunityCard = ({ info }) => {
+  console.log(JSON.stringify(info));
   var date1 = new Date(info.date.seconds * 1000);
   var date2 = new Date();
   var diffTime = Math.abs(date2 - date1);
