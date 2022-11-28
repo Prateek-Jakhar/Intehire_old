@@ -23,7 +23,7 @@ const Profile = () => {
       };
     });
   }
-
+  const imgUrl = localStorage.getItem("photoURL");
   function handleSubmit(e) {
     e.preventDefault();
     console.log(formData);
@@ -224,7 +224,7 @@ const Profile = () => {
       </div>
 
       <div className="profileRight">
-        <img src={require("../assets/background.png")} alt="profileimage" />
+        <img src={imgUrl} alt="profileimage" />
       </div>
     </div>
   );

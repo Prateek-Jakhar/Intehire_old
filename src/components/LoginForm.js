@@ -196,8 +196,8 @@ const LoginForm = () => {
           </button>
 
           <div className="bottom-div">
-            <span className="newAccount"> Don't have an account yet?</span>
-            <span className="createAcc">Create Account</span>
+            {/* <span className="newAccount"> Don't have an account yet?</span>
+            <span className="createAcc">Create Account</span> */}
           </div>
         </div>
       </div>

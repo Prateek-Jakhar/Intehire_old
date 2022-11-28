@@ -9,6 +9,7 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import SubmitExperience from "./SubmitExperience.js";
+import ProfileButton from "./ProfileButton.js";
 
 const Forum = () => {
   let navigate = useNavigate();
@@ -46,6 +47,9 @@ const Forum = () => {
 
   return (
     <div className="forumMain">
+      <div style={{ position: "absolute", right: "50px" }}>
+        <ProfileButton />
+      </div>
       <div style={{ width: "228px" }}>
         <LeftHeader />
       </div>

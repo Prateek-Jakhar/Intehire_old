@@ -52,26 +52,35 @@ const ResponseCard = ({ id }) => {
         <div className="first-question">
           For what role was the interview conducted?
         </div>
+        <br />
         <div className="first-answer">{data.a1}</div>
         <hr />
         <div className="second-question">
           What questions were asked in the various rounds? You can also provide
           the answers to them.
         </div>
-        <div className="second-answer">{data.a2}</div>
+        <div style={{ marginTop: "10px" }} className="second-answer">
+          {data.a2}
+        </div>
         <hr />
-        <div className="second-question">
+        <div style={{ marginTop: "10px" }} className="second-question">
           What was their selection and interview process like?
         </div>
-        <div className="second-answer">{data.a1}</div>
+        <div style={{ marginTop: "10px" }} className="second-answer">
+          {data.a3}
+        </div>
         <hr />
         <div className="second-question">
           What was the Interview Difficulty Level in your opinion?
         </div>
-        <div className="second-answer">{data.a2}</div>
+        <div style={{ marginTop: "10px" }} className="second-answer">
+          {data.a4}
+        </div>
         <hr />
         <div className="second-question">How was the overall experience?</div>
-        <div className="second-answer">{data.a2}</div>
+        <div style={{ marginTop: "10px" }} className="second-answer">
+          {data.a5}
+        </div>
         <hr />
       </div>
     </div>
