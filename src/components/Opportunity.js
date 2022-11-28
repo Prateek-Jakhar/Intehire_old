@@ -6,14 +6,14 @@ import { useNavigate } from "react-router-dom";
 
 const Opportunity = () => {
   let navigate = useNavigate();
-  if (localStorage.getItem('isLoggedIn') !== 'true'){
+  if (localStorage.getItem("isLoggedIn") !== "true") {
     navigate("/login", { replace: true });
   }
   return (
     <div className="opportunityMain">
-      <div style={{ width: "228px" }}>
+      {/* <div style={{ width: "228px" }}>
         <LeftHeader />
-      </div>
+      </div> */}
       <div className="opportunityMainRight">
         <Applications />
       </div>

@@ -20,15 +20,17 @@ const NewOpportunityCard = ({ info }) => {
         <div className="company-info">
           <img src={logo} alt="" />
           <div>
-            <h3>{info.title}</h3>
-            <p style={{ marginLeft: "-1px", marginTop: "-8px" }}>
-              ZS Associates
-            </p>
+            <div className="xyz">
+              <h3>{info.title}</h3>
+              <img className="logoImage" src={hat} alt="" />
+            </div>
+            {/* <h3>{info.title}</h3> */}
+            <p style={{ "text-align": "left" }}>{info.company_name}</p>
           </div>
 
-          <div className="graduation-cap">
+          {/* <div className="graduation-cap">
             <img src={hat} alt="" />
-          </div>
+          </div> */}
         </div>
         {/* <div className="graduation-cap">
         </div> */}

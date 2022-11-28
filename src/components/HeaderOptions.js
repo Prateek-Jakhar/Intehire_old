@@ -38,19 +38,19 @@ const HeaderOptions = () => {
         </div>
       </Link> */}
 
-      <Link to={"/"}>
+      {/* <Link to={"/"}>
         <div classname="messages" style={{ marginLeft: "-93px" }}>
           <img classname="image" src={Vector} alt="" />
           <span className="header-button">Messages</span>
         </div>
-      </Link>
+      </Link> */}
 
-      <Link to={"/"}>
+      {/* <Link to={"/"}>
         <div classname="Assessments" style={{ marginLeft: "-74px" }}>
           <img classname="image" src={asessment} alt="" />
           <span className="header-button">Assessments</span>
         </div>
-      </Link>
+      </Link> */}
 
       <Link to={"/opportunity"}>
         <div classname="Opportunity" style={{ marginLeft: "-78px" }}>

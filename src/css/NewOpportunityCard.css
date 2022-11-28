@@ -13,7 +13,6 @@
   border-radius: 12px;
 }
 .main-card h3 {
-  width: 50%;
 }
 .top {
   position: relative;
@@ -30,11 +29,8 @@
   padding-left: 20vw;
 } */
 .company-info > img {
-  position: static;
   width: 48px;
   height: 48px;
-  left: 0px;
-  top: 0px;
   /* border: 1px solid #232c33; */
   box-sizing: border-box;
   border-radius: 16px;
@@ -42,11 +38,15 @@
   order: 0;
   flex-grow: 0;
   margin: 0px 8px;
+  margin-left: auto !important;
 }
-
+.logoImage {
+  margin-left: auto;
+  margin-right: 50px;
+}
 .company-info > h3 {
   position: static;
-  width: 235px;
+  width: 500px;
   height: 26px;
   left: 0px;
   top: 0px;
@@ -112,4 +112,12 @@
 .graduation-cap {
   margin-left: 650px;
   align-items: right;
+}
+
+.xyz {
+  width: 790px;
+  display: flex;
+  /* align-items: center;
+  justify-content: space-between;
+  margin-left: -150px; */
 }

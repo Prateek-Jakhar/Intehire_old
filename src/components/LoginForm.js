@@ -9,6 +9,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
 import { auth, googleProvider } from "./Firebase";
 import { useNavigate } from "react-router-dom";
@@ -27,6 +28,34 @@ const LoginForm = () => {
     navigate("/", { replace: true });
   }
 
+  const googleSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        toast.success("User successfully logged out", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      })
+      .catch((error) => {
+        toast.error("An error occured! Please try again.", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      });
+  };
+
   const googleSignIn = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
@@ -39,8 +68,9 @@ const LoginForm = () => {
         // ...
         console.log("LOGIN SUCCESSFUL");
         if (user.email.split("@")[1] === "lnmiit.ac.in") {
-          userContext.setName();
           localStorage.setItem("isLoggedIn", true);
+          localStorage.setItem("userName", user.displayName);
+          localStorage.setItem("photoURL", user.photoURL);
           navigate("/", { replace: true });
         } else {
           toast.error("Login failed", {

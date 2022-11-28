@@ -8,7 +8,7 @@ const NewOpportunityCardTop2 = () => {
         <span className="opportunity-heading">
           Qoala - New Opportunity for You
         </span>
-        <button className="remove-button">Remove</button>
+        {/* <button className="remove-button">Remove</button> */}
       </div>
 
       <hr style={{ marginLeft: "30px" }} />

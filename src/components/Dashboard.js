@@ -6,7 +6,7 @@ import FeedButton from "./FeedButton";
 import NewOpportunityCard from "./NewOpportunityCard";
 import OldOpportunityCard from "./OldOpportunityCard";
 import NewOpportunityCardTop from "./NewOpportunityCardTop";
-import {db} from "./Firebase";
+import { db } from "./Firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
@@ -15,36 +15,36 @@ const Dashboard = () => {
   const [dataForums, setDataForums] = useState([]);
   let navigate = useNavigate();
 
-  if (localStorage.getItem('isLoggedIn') !== 'true'){
+  if (localStorage.getItem("isLoggedIn") !== "true") {
     navigate("/login", { replace: true });
   }
 
-    const fetchPostApplication = async () => {
-        const querySnapshot = await getDocs(collection(db, "applications"))
-        let data_list = []
-        querySnapshot.forEach((doc) => {
-            data_list.push(doc.data());
-        });
-        setDataApplication(data_list);
-    }
+  const fetchPostApplication = async () => {
+    const querySnapshot = await getDocs(collection(db, "applications"));
+    let data_list = [];
+    querySnapshot.forEach((doc) => {
+      data_list.push(doc.data());
+    });
+    setDataApplication(data_list);
+  };
 
-    const fetchPostForums = async () => {
-        const querySnapshot = await getDocs(collection(db, "forums"))
-        let data_list2 = []
-        querySnapshot.forEach((doc) => {
-            data_list2.push(doc.data());
-        });
-        setDataForums(data_list2);
-    }
+  const fetchPostForums = async () => {
+    const querySnapshot = await getDocs(collection(db, "forums"));
+    let data_list2 = [];
+    querySnapshot.forEach((doc) => {
+      data_list2.push(doc.data());
+    });
+    setDataForums(data_list2);
+  };
 
-    useEffect(()=>{
-        fetchPostApplication();
-        fetchPostForums();
-    },[])
+  useEffect(() => {
+    fetchPostApplication();
+    fetchPostForums();
+  }, []);
 
-    // useEffect(()=>{
-    //     fetchPostApplication();
-    // },[])
+  // useEffect(()=>{
+  //     fetchPostApplication();
+  // },[])
 
   return (
     <div className="dashboardMain">
@@ -52,30 +52,27 @@ const Dashboard = () => {
         <LeftHeader />
       </div>
       <div className="dashboardMainRight">
-        <div className="mainTop">
-          <FeedButton text={"Verified"} />
-          <FeedButton text={"Unverified"} />
-        </div>
+        <div className="mainTop"></div>
         <div className="mainMiddle">
           <NewOpportunityCardTop />
           <NewOpportunityCardTop />
         </div>
         <div className="mainSecondMiddle">
-          {dataApplication.map((item)=>{
-            return(
+          {dataApplication.map((item) => {
+            return (
               <>
-                <NewOpportunityCard info={item}/>
+                <NewOpportunityCard info={item} />
               </>
-            )
+            );
           })}
         </div>
         <div className="mainBottom">
-          {dataForums.map((item)=>{
-            return(
+          {dataForums.map((item) => {
+            return (
               <>
-                <OldOpportunityCard info={item}/>
+                <OldOpportunityCard info={item} />
               </>
-            )
+            );
           })}
         </div>
       </div>

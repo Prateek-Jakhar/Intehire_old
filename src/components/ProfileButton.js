@@ -6,6 +6,8 @@ import plus from "../assets/add.png";
 import minus from "../assets/minus.png";
 import LogoutMenu from "./LogoutMenu";
 const ProfileButton = () => {
+  const name = localStorage.getItem("userName");
+  const imgUrl = localStorage.getItem("photoURL");
   const [isActive, setisActive] = React.useState(false);
   function handleClick() {
     setisActive((prevState) => !prevState);
@@ -15,15 +17,16 @@ const ProfileButton = () => {
     <>
       <div style={{ height: "100px" }}>
         <div onClick={handleClick} className="profile-button">
-          <img src={pic} alt="" />
-          <text className="profile-name">Nitesh Patel</text>
-          <img
+          <img src={imgUrl} alt="" />
+          <text className="profile-name">{name}</text>
+          {/* <img
             className="profile-image"
             src={bell}
             alt=""
             height="20px"
             width="20px"
-          />
+            style={{ marginRight: "20px", marginLeft: "20px" }}
+          /> */}
           {!isActive && (
             <img
               className="profile-image"
@@ -32,6 +35,7 @@ const ProfileButton = () => {
                 height: "20px",
                 width: "20px",
                 filter: "invert(100%)",
+                marginLeft: "120px",
               }}
               src={plus}
               alt=""
@@ -45,6 +49,7 @@ const ProfileButton = () => {
                 height: "20px",
                 width: "20px",
                 filter: "invert(100%)",
+                marginLeft: "120px",
               }}
               src={minus}
               alt=""
